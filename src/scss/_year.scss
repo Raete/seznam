@@ -1,0 +1,153 @@
+// year section
+.year {
+    margin: 150px 0;
+    position: relative;
+
+    // on desktop
+    @media screen and (min-width: 500px) {
+        max-width: 800px;
+    }
+
+    &_content {
+        padding: 0 15px 0 50px;
+
+        // on desktop
+        @media screen and (min-width: 500px) {
+            padding: 0 15px 0 80px;
+        }
+    }
+
+    // year papragraphs
+    &_text {
+        font-family: $font_paragraph;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1.4em;
+        
+    }
+    p:not(:first-of-type) {
+        margin-top: 35px;
+    }
+
+    // year headline
+    &_title{
+        font-family: $second-font;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        line-height: 1.5em;
+
+
+        // on desktop
+        @media screen and (min-width: 500px) {
+            font-size: 2em;
+        
+        }
+    }
+
+    // white line
+    &::before {
+        content: "";
+        background: url(img/lane.png); 
+        position: absolute;
+        width: 25px;
+        height: 103%;
+        top: -30px;
+        left: 10px;
+    }
+
+    // year logo in circle
+    &_logo {
+        display: block;
+        width: 150px;
+
+        // on desktop
+        @media screen and (min-width: 500px) {
+            width: 250px;
+        }
+    }
+
+    // year header
+    &_header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -35px;
+
+        // desktop
+        @media screen and (min-width: 500px) {
+            top: -35px
+        }
+    }
+
+    // arrow before year 
+    &_arrow {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -120px;
+        clip: rect(200px 85px 240px 0);
+
+        // desktop
+        @media screen and (min-width: 500px) {
+            left: -100px;
+            clip: rect(180px 85px 240px 0);
+        }
+    }
+
+    // year title
+    &_head {
+        position: relative;
+        padding-left: 50px;
+        
+        // on desktop
+        @media screen and (min-width: 400px) {
+            padding-left: 85px;
+        }
+    }
+}
+
+// speed counter box
+.speed {
+
+    // box with border
+    &_box {
+        margin: 50px 15px 100px 50px;
+        padding: 25px;
+        max-width: 360px;
+        text-align: center;
+        border: 1px solid $color-text;
+        position: relative;
+        
+        // on desktop
+        @media screen and (min-width: 400px) {
+            max-width: 230px;
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    // number counter
+    &_counter {
+        position: absolute;
+        margin: 0;
+        top: -25px;
+        color: $color-alert;
+        background: url(img/asfalt.png) repeat;
+        width: 50px;
+        font-family: $font_paragraph;
+        font-weight: 900;
+        font-size: 2.6em;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 40px;
+    }
+
+    // counter text
+    &_text {
+        font-family: $second-font;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.3em;
+        line-height: 1.4em;
+    }
+}

@@ -1,0 +1,33 @@
+
+.animation_car {
+    animation: drive  0s both linear infinite;
+    &--slow {
+        animation-duration: 15s;
+    }
+    &--fast {
+        animation-duration: 10s;
+    }
+}
+
+@keyframes drive {
+    0% {
+        transform: 
+            translateX(100vw)
+            rotateY(0deg);
+    } 
+    40% {
+        transform: 
+            translateX(-100vw) 
+            rotateY(0deg)
+    } 
+    55% {
+        transform: 
+            translateX(-100vw) 
+            rotateY(180deg)
+    } 
+    100% {
+        transform: 
+            translateX(100vw) 
+            rotateY(180deg);
+    } 
+}

@@ -1,0 +1,86 @@
+
+
+body {
+    font-family: $main-font;;
+    background: url(img/asfalt.png) repeat;
+    color: $color-text;
+    margin: 0;
+ 
+  
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+   
+}
+// responsive image
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+// helpers //
+.h-lowercase {
+    text-transform: lowercase
+}
+
+.m_big {
+    margin-top: 350px;
+}
+
+.mb-0 {
+   margin-bottom: 0
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+// buttons 
+
+// link button
+.btn {
+    display: block;
+    text-decoration: none;
+    font-family: $main-font;
+    font-weight: 900;
+    font-size: 2em;
+    color: $color-text;
+    border: 1px solid $color-text;
+    padding: 10px 50px 10px 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .8s;
+    margin-top: 100px;
+    max-width: 70px;
+
+    // arrow in button
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 1.3vmin;
+        height: 1.3vmin;
+        border-top: .5vmin solid white;
+        border-right: .5vmin solid white;
+        right: 20px;
+        transform: translate3d(0,-50%,0) rotate(45deg);
+        transition: .8s;
+    }
+
+    &:hover {
+        background: $color-text;
+        color: black;
+    
+        &::after {
+            border-top: .5vmin solid black;
+            border-right: .5vmin solid black;   
+        }
+    }
+}
