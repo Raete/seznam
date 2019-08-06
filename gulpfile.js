@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const replace = require('gulp-replace');
+const htmlmin = require('gulp-html-minifier');
 
 
 // File paths
@@ -42,6 +43,14 @@ function jsTask(){
     );
 }
 
+
+// minify html
+function htmlTask() {
+    return src(['index.html'])
+        .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
+        .pipe(dest('dist'))
+}
+
 // Cachebust
 var cbString = new Date().getTime();
 function cacheBustTask(){
@@ -58,7 +67,7 @@ function watchTask(){
 
 // Export the default Gulp task so it can be run
 exports.default = series(
-    parallel(scssTask, jsTask), 
+    parallel(scssTask, jsTask, htmlTask), 
     cacheBustTask,
     watchTask
 );

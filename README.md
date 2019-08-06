@@ -9,7 +9,7 @@ Run `gulp`
 
 ## Build
 
-The build artifacts is stored in the `dist/` directory and `index.html` is in the root file.
+The build artifacts is stored in the `dist/` folder.
 
 ## Website link
 
